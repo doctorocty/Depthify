@@ -4,8 +4,6 @@ A sleek 3D-enhanced website showcasing interactive elements and immersive design
 
 🚀 Live Demo
 
-Check it out here: [Depthify Live](https://depthify.vercel.app)
-
 🖥️ Features
 
 - Modern, responsive design.
