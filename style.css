@@ -1,0 +1,197 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c505f5;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ab2bc5;
+}
+
+.btn-signing {
+  padding: 8px 16px;
+  background: #7d169c;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-signing:hover {
+  background: #ca16ca;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 100vh;
+  padding: 120px 60px 60px;
+  overflow: hidden;
+}
+
+/* Hero Content */
+.content {
+  max-width: 50%;
+  z-index: 2; /* above the Spline */
+}
+
+.tag-box {
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255, 77, 109, 0.15);
+  color: #c827ce;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-get-started,
+.btn-signing-main {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-get-started {
+  background: transparent;
+  border: 2px solid #aa17af;
+  color: #ba35d4;
+}
+
+.btn-get-started:hover {
+  background: #c740e9;
+  color: #fff;
+}
+
+.btn-signing-main {
+  background: #c330d6;
+  color: #fff;
+}
+
+.btn-signing-main:hover {
+  background: #9910a5;
+}
+
+/* Spline Model - immersive version */
+.spline-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 70%;       /* bigger width */
+  height: 120%;     /* taller than hero */
+  max-height: 1300px;
+  z-index: 1;       /* behind content */
+  pointer-events: none; /* prevent accidental clicks on model */
+}
+
+spline-viewer {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 30px 30px;
+    height: auto;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .spline-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    max-height: none;
+    transform: none;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spline-wrapper {
+    height: 300px;
+  }
+}
